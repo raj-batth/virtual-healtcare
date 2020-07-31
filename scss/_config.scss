@@ -10,7 +10,6 @@ $white: #fff;
 $dot-color: linear-gradient(338.56deg, #97C3F9 -67.72%, #93C1F9 1376.33%);
 
 // mixins
-
 @mixin flexCenter($direction) {
   display: flex;
   justify-content: center;

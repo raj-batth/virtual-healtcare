@@ -40,6 +40,12 @@ p {
   border-radius: 3.5rem;
   font-weight: 500;
   font-size: 1.2rem;
+  transition: 1s;
+  border: 0.1rem solid $primary-color;
+}
+.btn:hover {
+  color: $primary-color;
+  background-color: $white;
 }
 .container {
   max-width: $website-width;
@@ -47,8 +53,17 @@ p {
   padding: 0 1rem;
   // background-color: $primary-color;
 }
+.bottom-line {
+  height: 0.2rem;
+  width: 5rem;
+  margin: 2rem auto 0.5rem;
+  border-radius: 1rem;
+  background-color: $heading-color;
+  text-align: center;
+}
 
 #home {
+  position: relative;
   .nav-bar {
     padding: 3rem 1rem;
     @include flexCenter(row);
@@ -97,13 +112,128 @@ p {
   .header-content {
     @include flexCenter(row);
     justify-content: space-between;
+    padding: 3rem 1rem;
     .text-content {
-      // background-color: hotpink;
       max-width: 500px;
-      // max-width: 50%;
       h1 {
         font-size: 3.2rem;
       }
+      .btn {
+        margin: 2.5rem 0;
+      }
+    }
+    img {
+      min-width: 500px;
+    }
+  }
+  img.vertical-three-dots {
+    position: absolute;
+    top: 8.5rem;
+    z-index: -1;
+    // width: 100;
+  }
+}
+
+#services {
+  @include flexCenter(column);
+  background: url('../img/wave-service.svg') no-repeat;
+  background-position: left;
+  background-size: contain;
+  margin: 2rem auto;
+  position: relative;
+  p {
+    font-size: 1.2rem;
+  }
+  .intro {
+    padding: 3rem 1rem;
+    text-align: center;
+    width: 100%;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+  }
+  .service-boxes {
+    width: 100%;
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    margin: 0 auto;
+    .service {
+      box-shadow: 0 0 1rem rgba(234, 242, 253, 0.5);
+      background-color: $white;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      & img {
+        height: 95px;
+        z-index: 1;
+      }
+      h2 {
+        margin-top: 3rem;
+      }
+    }
+  }
+  .button {
+    // padding: 3rem 1rem;
+    a {
+      background-color: $white;
+      color: $primary-color;
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+  }
+  .dots-service {
+    position: absolute;
+    right: 0;
+    top: 52%;
+    z-index: -1;
+  }
+}
+
+#provider-app {
+  margin: 5rem auto;
+  a {
+    background-color: $white;
+    color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .bottom-line {
+    display: block;
+    margin-left: 0;
+  }
+  .provider-content {
+    @include flexCenter(row-reverse);
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    .text-content {
+      max-width: 500px;
+      .btn {
+        margin: 2.5rem 0;
+      }
+    }
+    img {
+      min-width: 500px;
+    }
+  }
+  .app-content {
+    padding: 3rem 1rem;
+    @include flexCenter(row);
+    justify-content: space-between;
+    .text-content {
+      max-width: 500px;
       .btn {
         margin: 2.5rem 0;
       }
