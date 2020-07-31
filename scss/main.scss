@@ -1,0 +1,115 @@
+@import 'config';
+@import 'media';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+ul {
+  list-style: none;
+}
+h2,
+h3,
+h4 {
+  color: $heading-color;
+  line-height: 2.7rem;
+}
+p {
+  padding-top: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  color: $text-color;
+  font-size: 1.5rem;
+}
+.img {
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  color: $white;
+  background-color: $primary-color;
+  padding: 1.5rem 3.5rem;
+  border-radius: 3.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.container {
+  max-width: $website-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+  // background-color: $primary-color;
+}
+
+#home {
+  .nav-bar {
+    padding: 3rem 1rem;
+    @include flexCenter(row);
+    justify-content: space-between;
+    .logo {
+      @include flexCenter(row);
+      .logo-sign {
+        @include flexCenter(column);
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: $primary-color;
+        padding: 1.5rem;
+        border-radius: 50%;
+        color: $white;
+        margin-right: 1rem;
+        span {
+          font-weight: 600;
+          font-size: 2rem;
+        }
+      }
+      h1 {
+        color: $heading-color;
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+    }
+    ul {
+      @include flexCenter(row);
+      li {
+        margin: 1rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        a {
+          &.active,
+          &:hover {
+            color: $heading-color;
+            font-weight: 600;
+          }
+        }
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .header-content {
+    @include flexCenter(row);
+    justify-content: space-between;
+    .text-content {
+      // background-color: hotpink;
+      max-width: 500px;
+      // max-width: 50%;
+      h1 {
+        font-size: 3.2rem;
+      }
+      .btn {
+        margin: 2.5rem 0;
+      }
+    }
+    img {
+      min-width: 500px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #7D7987; }
+
+ul {
+  list-style: none; }
+
+h2,
+h3,
+h4 {
+  color: #000;
+  line-height: 2.7rem; }
+
+p {
+  padding-top: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  color: #7D7987;
+  font-size: 1.5rem; }
+
+.img {
+  width: 100%; }
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #458FF6;
+  padding: 1.5rem 3.5rem;
+  border-radius: 3.5rem;
+  font-weight: 500;
+  font-size: 1.2rem; }
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem; }
+
+#home .nav-bar {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between; }
+  #home .nav-bar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    #home .nav-bar .logo .logo-sign {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 2.5rem;
+      width: 2.5rem;
+      background-color: #458FF6;
+      padding: 1.5rem;
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 1rem; }
+      #home .nav-bar .logo .logo-sign span {
+        font-weight: 600;
+        font-size: 2rem; }
+    #home .nav-bar .logo h1 {
+      color: #000;
+      font-size: 1.7rem;
+      font-weight: 600; }
+  #home .nav-bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    #home .nav-bar ul li {
+      margin: 1rem;
+      font-size: 1.2rem;
+      font-weight: 300; }
+      #home .nav-bar ul li a.active, #home .nav-bar ul li a:hover {
+        color: #000;
+        font-weight: 600; }
+    #home .nav-bar ul li:last-child {
+      margin-right: 0; }
+
+#home .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between; }
+  #home .header-content .text-content {
+    max-width: 500px; }
+    #home .header-content .text-content h1 {
+      font-size: 3.2rem; }
+    #home .header-content .text-content .btn {
+      margin: 2.5rem 0; }
+  #home .header-content img {
+    min-width: 500px; }

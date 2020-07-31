@@ -1,0 +1,19 @@
+// variables
+$website-width: 1300px;
+$primary-color: #458FF6;
+$secondary-color: linear-gradient(338.56deg, #97C3F9 -67.72%, #93C1F9 1376.33%);
+$heading-color: #000;
+$text-color:  #7D7987;
+$testimonial-bg-color: linear-gradient(191.49deg, #67C3F3 9.05%, #5A98F2 76.74%);
+$footer-bg:  linear-gradient(180.92deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+$white: #fff;
+$dot-color: linear-gradient(338.56deg, #97C3F9 -67.72%, #93C1F9 1376.33%);
+
+// mixins
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
