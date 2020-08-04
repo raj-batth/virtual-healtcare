@@ -1,3 +1,80 @@
+@media (max-width: 768px) {
+  #home .nav-bar {
+    padding: 3rem 1rem;
+    flex-direction: column !important; }
+  #home .header-content {
+    flex-direction: column-reverse !important; }
+    #home .header-content img {
+      min-width: 500px;
+      opacity: 0.6; }
+  #services .service-boxes,
+  #articles .service-boxes {
+    grid-template-columns: repeat(2, 1fr) !important; }
+  #provider-app .provider-content {
+    flex-direction: column-reverse !important; }
+  #provider-app .app-content {
+    flex-direction: column-reverse !important; }
+  #testimonial-slider .slider-content {
+    margin: 0 1rem; }
+    #testimonial-slider .slider-content .customer-info {
+      flex-direction: column !important; }
+  footer .footer {
+    padding-bottom: 0 !important;
+    grid-template-areas: 'C R H' 'CI CI CI' !important;
+    justify-items: center; }
+    footer .footer .company-info {
+      margin-top: 2rem;
+      max-width: 100% !important;
+      text-align: center; }
+      footer .footer .company-info .logo {
+        justify-content: center !important; } }
+
+@media (max-width: 500px) {
+  body {
+    text-align: center !important; }
+  h1 {
+    font-size: 1.5rem !important; }
+  h2,
+  p,
+  a {
+    font-size: 1rem !important; }
+  #home .nav-bar {
+    padding: 3rem 1rem;
+    flex-direction: column !important; }
+    #home .nav-bar ul {
+      flex-direction: column !important; }
+  #home .header-content {
+    flex-direction: column-reverse !important; }
+    #home .header-content img {
+      display: none; }
+  #services .service-boxes,
+  #articles .service-boxes {
+    grid-template-columns: repeat(1, 1fr) !important; }
+  #provider-app .bottom-line {
+    text-align: center !important;
+    margin: 1rem auto !important; }
+  #provider-app img {
+    display: none; }
+  #provider-app .provider-content {
+    flex-direction: column-reverse !important; }
+  #provider-app .app-content {
+    flex-direction: column-reverse !important; }
+  #testimonial-slider h2 {
+    font-size: 1.5rem !important; }
+  #testimonial-slider .slider-content {
+    padding: 1rem !important;
+    margin: 0 1rem; }
+    #testimonial-slider .slider-content .customer-info {
+      flex-direction: column !important; }
+  footer .footer {
+    padding-bottom: 0 !important;
+    grid-template-areas: 'C C R' 'H H H' 'CI CI CI' !important; }
+    footer .footer .company-info {
+      margin-top: 2rem;
+      text-align: center; }
+      footer .footer .company-info .logo {
+        justify-content: center !important; } }
+
 * {
   margin: 0;
   padding: 0;

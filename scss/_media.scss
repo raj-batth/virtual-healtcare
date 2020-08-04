@@ -1,0 +1,138 @@
+@media (max-width: 768px) {
+  body {
+    // font-size: 63.5%;
+  }
+  #home {
+    .nav-bar {
+      padding: 3rem 1rem;
+      flex-direction: column !important;
+    }
+    .header-content {
+      flex-direction: column-reverse !important;
+      img {
+        min-width: 500px;
+        opacity: 0.6;
+      }
+    }
+  }
+  #services,
+  #articles {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  #provider-app {
+    .provider-content {
+      flex-direction: column-reverse !important;
+    }
+    .app-content {
+      flex-direction: column-reverse !important;
+    }
+  }
+  #testimonial-slider {
+    .slider-content {
+      margin: 0 1rem;
+      .customer-info {
+        flex-direction: column !important;
+      }
+    }
+  }
+  footer {
+    .footer {
+      padding-bottom: 0 !important;
+      grid-template-areas:
+        'C R H'
+        'CI CI CI' !important;
+      justify-items: center;
+      .company-info {
+        margin-top: 2rem;
+        max-width: 100% !important;
+        text-align: center;
+        .logo {
+          justify-content: center !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    text-align: center !important;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2,
+  p,
+  a {
+    font-size: 1rem !important;
+  }
+
+  #home {
+    .nav-bar {
+      padding: 3rem 1rem;
+      flex-direction: column !important;
+      ul {
+        flex-direction: column !important;
+      }
+    }
+    .header-content {
+      flex-direction: column-reverse !important;
+
+      img {
+        display: none;
+      }
+    }
+  }
+  #services,
+  #articles {
+    .service-boxes {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+  #provider-app {
+    .bottom-line {
+      text-align: center !important;
+      margin: 1rem auto !important;
+    }
+    img {
+      display: none;
+    }
+    .provider-content {
+      flex-direction: column-reverse !important;
+    }
+    .app-content {
+      flex-direction: column-reverse !important;
+    }
+  }
+  #testimonial-slider {
+    h2 {
+      font-size: 1.5rem !important;
+    }
+    .slider-content {
+      padding: 1rem !important;
+      margin: 0 1rem;
+      .customer-info {
+        flex-direction: column !important;
+      }
+    }
+  }
+  footer {
+    .footer {
+      padding-bottom: 0 !important;
+      grid-template-areas:
+        'C C R'
+        'H H H'
+        'CI CI CI' !important;
+      // justify-items: center;
+      .company-info {
+        margin-top: 2rem;
+        text-align: center;
+        .logo {
+          justify-content: center !important;
+        }
+      }
+    }
+  }
+}
