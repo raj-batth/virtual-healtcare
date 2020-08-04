@@ -134,7 +134,8 @@ p {
   }
 }
 
-#services {
+#services,
+#articles {
   @include flexCenter(column);
   background: url('../img/wave-service.svg') no-repeat;
   background-position: left;
@@ -161,7 +162,7 @@ p {
     grid-gap: 1.5rem;
     margin: 0 auto;
     .service {
-      box-shadow: 0 0 1rem rgba(234, 242, 253, 0.5);
+      box-shadow: 0 0 1rem rgba(234, 242, 253, 0.8);
       background-color: $white;
       border-radius: 1.5rem;
       padding: 2.5rem;
@@ -244,6 +245,7 @@ p {
   }
 }
 #testimonial-slider {
+  margin: 5rem auto;
   position: relative;
   img.dots-outside {
     position: absolute;
@@ -256,8 +258,8 @@ p {
     background: $testimonial-bg-color;
     @include flexCenter(column);
     border-radius: 2rem;
-    margin: 5rem auto;
-    padding: 3rem 4rem;
+    margin-bottom: 2rem;
+    padding: 4rem 4rem;
     .bottom-line {
       background-color: $white;
     }
@@ -269,6 +271,10 @@ p {
     p {
       font-size: 1.1rem;
       font-weight: lighter;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
     }
     .customer-info {
       @include flexCenter(row);
@@ -289,11 +295,19 @@ p {
         max-width: 500px;
       }
     }
-    img.dots {
+    .img {
+      max-width: 150px;
       position: absolute;
-      // right: -3%;
       top: 0;
-      z-index: 10;
+      right: 1rem;
+      // background-color: red;
+      overflow: hidden;
+      .dots {
+        width: 100%;
+        height: auto;
+        // background-color: green;
+        margin-top: -1.5rem;
+      }
     }
   }
   .dot {
@@ -305,5 +319,140 @@ p {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+  }
+  .prev,
+  .next {
+    color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 0 2rem;
+  }
+}
+#articles {
+  @include flexCenter(column);
+  background: url('../img/wave-articles.svg') no-repeat;
+  background-position: right;
+  background-size: contain;
+  margin: 2rem auto;
+  position: relative;
+  transform: rotate(-360deg);
+  .service-boxes {
+    // background-color: green;
+    .service {
+      // background-color: blue;
+      // box-shadow: 0 0 1.5rem $text-color;
+      padding: 0;
+      img {
+        width: 100%;
+        height: auto;
+        // background-color: red;
+        z-index: 1;
+      }
+      h2 {
+        margin-top: 3rem;
+      }
+      div {
+        padding: 2rem 2rem;
+      }
+    }
+  }
+
+  a {
+    background-color: $white;
+    color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+    p {
+      color: $primary-color;
+    }
+  }
+  img.dots-service {
+    position: absolute;
+    top: 18%;
+    left: -100%;
+    z-index: -1;
+  }
+}
+footer {
+  background: $footer-bg;
+  padding: 0 1rem;
+  position: relative;
+  .footer {
+    display: grid;
+    padding: 5rem 0;
+    grid-template-areas: 'CI C R H';
+    p {
+      font-size: 1.2rem;
+      color: $white;
+      font-weight: lighter;
+    }
+    h2 {
+      color: $white;
+    }
+    ul {
+      li {
+        padding: 0.5rem 0;
+        a {
+          color: $white;
+          font-weight: lighter;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .company-info {
+      grid-area: CI;
+      align-self: center;
+      max-width: 500px;
+      .logo {
+        @include flexCenter(row);
+        justify-content: start;
+        .logo-sign {
+          @include flexCenter(column);
+          height: 2.5rem;
+          width: 2.5rem;
+          background-color: $white;
+          // padding: 1.5rem;
+          border-radius: 50%;
+          color: $primary-color;
+          margin-right: 1rem;
+          span {
+            font-weight: 600;
+            font-size: 2rem;
+          }
+        }
+        h1 {
+          color: $white;
+          font-size: 1.7rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .company {
+      grid-area: C;
+      align-self: center;
+    }
+    .help {
+      grid-area: H;
+      align-self: center;
+    }
+    .region {
+      grid-area: R;
+      align-self: center;
+    }
+  }
+  img.dot1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  img.dot2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -80px;
+    z-index: -1;
   }
 }
